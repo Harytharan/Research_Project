@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f47e503-f3da-4829-85e2-9bcb1077f3aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_combined_trend.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_combined_trend.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_prediction_results.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_prediction_results.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/models/best_lstm_price_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/models/best_lstm_price_model.keras" afterDir="false" />
@@ -20,26 +21,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="36xiqvGs14j73a3g9IZ6ZIHvTPn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.predict.executor": "Run",
-    "Python.train.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Sales__And__Demand__Prediction__IT22217004",
-    "last_opened_file_path": "D:/Ai-Driven Decission Support System For Sustainable Paddy Farming"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sales__And__Demand__Prediction__IT22217004&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Ai-Driven Decission Support System For Sustainable Paddy Farming&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.predict">
+}</component>
+  <component name="RunManager" selected="Python.train">
     <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Ai-Driven Decission Support System For Sustainable Paddy Farming" />
       <option name="ENV_FILES" value="" />
@@ -86,8 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.predict" />
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.predict" />
       </list>
     </recent_temporary>
   </component>
