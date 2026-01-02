@@ -13,7 +13,7 @@ class SerialMonitor:
         self.running = False
 
     def connect(self):
-        print("SERIAL MONITOR SYSTEM - INITIALIZATION")
+        print("SERIAL MONITOR")
 
         print(f"Using HARD-CODED PORT : {self.port}")
         print(f"⚙Using HARD-CODED BAUD : {self.baudrate}")

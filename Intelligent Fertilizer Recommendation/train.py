@@ -1,49 +1,87 @@
-import joblib
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
-from preprocess import load_and_preprocess_data
 import os
+import joblib
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from sklearn.metrics import accuracy_score, mean_squared_error, r2_score
+
+DATA_FILE = "Dataset.csv"
 
 def main():
-    print("Starting training pipeline for Fertilizer Recommendation System...\n")
+    df = pd.read_csv(DATA_FILE)
 
-    #  Load and preprocess data
-    (
-        X_train, X_test, y_train, y_test,
-        scaler, target_encoder, label_encoders, feature_names
-    ) = load_and_preprocess_data()
+    label_encoders = {}
+    categorical_cols = [
+        "Paddy_Growth_Stage",
+        "Purpose",
+        "Recommended_Fertilizer"
+    ]
 
-    # Model setup
-    print("\nInitializing Random Forest model...")
-    model = RandomForestClassifier(
-        n_estimators=150,
-        max_depth=10,
-        random_state=42,
-        class_weight='balanced',
+    for col in categorical_cols:
+        le = LabelEncoder()
+        df[col] = le.fit_transform(df[col])
+        label_encoders[col] = le
+
+
+    # FEATURES
+    feature_cols = [
+        "Soil_Temperature (°C)",
+        "Soil_Moisture (%)",
+        "Air_Temperature (°C)",
+        "Air_Humidity (%)",
+        "Paddy_Growth_Stage",
+        "Purpose",
+        "Recommended_Fertilizer",
+        "Quantity_kg_per_acre"
+    ]
+
+    X = df[feature_cols]
+
+    # Targets
+    y_fertilizer = df["Recommended_Fertilizer"]
+    y_yield = df["Predicted_Yield_ton_per_ha"]
+
+
+    # Scaling
+
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    X_train, X_test, yF_train, yF_test, yY_train, yY_test = train_test_split(
+        X_scaled, y_fertilizer, y_yield, test_size=0.2, random_state=42
     )
 
-    # raining
-    print("Training model...")
-    model.fit(X_train, y_train)
-    print("Model training complete!\n")
 
-    #  Evaluation
-    print("Evaluating model on test data...")
-    y_pred = model.predict(X_test)
-    acc = accuracy_score(y_test, y_pred)
-    print(f"Accuracy: {acc * 100:.2f}%")
-    print("\nClassification Report:\n", classification_report(y_test, y_pred))
+    # Models
 
-    # Save model & encoders
+    clf = RandomForestClassifier(n_estimators=300, random_state=42)
+    reg = RandomForestRegressor(n_estimators=300, random_state=42)
+
+    clf.fit(X_train, yF_train)
+    reg.fit(X_train, yY_train)
+
+
+    # Evaluation
+    acc = accuracy_score(yF_test, clf.predict(X_test))
+    mse = mean_squared_error(yY_test, reg.predict(X_test))
+    r2 = r2_score(yY_test, reg.predict(X_test))
+
+    print("\n--> MODEL PERFORMANCE")
+    print(f"Classification Accuracy for Fertilizer: {acc*100:.2f}%")
+    print(f"Regression MSE for Predicted Yield: {mse:.3f}")
+    print(f"Regression R2 score: {r2:.3f}")
+
+
+    # Save
     os.makedirs("models", exist_ok=True)
-    joblib.dump(model, "models/fertilizer_model.pkl")
-    joblib.dump(scaler, "models/scaler.pkl")
-    joblib.dump(target_encoder, "models/target_encoder.pkl")
-    joblib.dump(label_encoders, "models/feature_encoders.pkl")
-    joblib.dump(feature_names, "models/feature_names.pkl")
+    joblib.dump(clf, "fertilizer_models/fertilizer_model.pkl")
+    joblib.dump(reg, "yield_models/yield_model.pkl")
+    joblib.dump(scaler, "yield_models/scaler.pkl")
+    joblib.dump(label_encoders, "fertilizer_models/label_encoders.pkl")
+    joblib.dump(feature_cols, "fertilizer_models/feature_names.pkl")
 
-    print("\nAll models and encoders saved successfully to /models/")
-    print("Training pipeline completed successfully!")
+    print("\n--> Training complete. Models saved")
 
 if __name__ == "__main__":
     main()
