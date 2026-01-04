@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47e503-f3da-4829-85e2-9bcb1077f3aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/predict_gru_rf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/train_gru_rf.py" afterDir="false" />
+    <list default="true" id="9f47e503-f3da-4829-85e2-9bcb1077f3aa" name="Changes" comment="Issue fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_combined_trend.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_combined_trend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_prediction_results.png" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/enhanced_prediction_results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/load.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/models/best_lstm_price_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/models/best_lstm_price_model.keras" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/models/lstm_price_model_final.h5" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/models/lstm_price_model_final.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/models/training_info.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/models/training_info.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/models/xgb_demand_model_best_optimized.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/models/xgb_demand_model_best_optimized.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/predict_from_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/predict_from_sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sales And Demand Forcasting/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sales And Demand Forcasting/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.ReadSensor.executor&quot;: &quot;Run&quot;,
     &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict_from_sensor.executor&quot;: &quot;Run&quot;,
     &quot;Python.predict_gru_rf.executor&quot;: &quot;Run&quot;,
     &quot;Python.train.executor&quot;: &quot;Run&quot;,
     &quot;Python.train_gru_rf.executor&quot;: &quot;Run&quot;,
@@ -62,8 +68,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.predict_gru_rf">
-    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.predict_from_sensor">
+    <configuration name="ReadSensor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Ai-Driven Decission Support System For Sustainable Paddy Farming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,7 +82,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sales And Demand Forcasting/predict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sales And Demand Forcasting/ReadSensor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="predict_from_sensor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Ai-Driven Decission Support System For Sustainable Paddy Farming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sales And Demand Forcasting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sales And Demand Forcasting/predict_from_sensor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,10 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.predict_from_sensor" />
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.ReadSensor" />
         <item itemvalue="Python.predict_gru_rf" />
         <item itemvalue="Python.train_gru_rf" />
-        <item itemvalue="Python.predict" />
-        <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>

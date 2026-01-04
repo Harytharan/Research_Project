@@ -4,7 +4,8 @@ def load_dataset(path="paddy_price_demand_dataset.csv"):
 
     df = pd.read_csv(path)
     # Ensure Date is datetime
-    if "Date" in df.columns:
+    if ("Date" in df.
+            columns):
         df["Date"] = pd.to_datetime(df["Date"])
         df = df.sort_values("Date").reset_index(drop=True)
     else:
