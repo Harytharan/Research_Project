@@ -1,5 +1,19 @@
 # AI-Driven Decision Support System for Sustainable Paddy Farming Optimization
 
+## 🔗 GitHub Repositories
+- **Frontend Repository**: https://github.com/tharsie/Reaserch-ui.git
+- **Backend Repository**:https://github.com/Harytharan/Research_Project.git
+
+## 👥 Team Members
+
+| Name | IT Number | Role / Responsibility |
+|-----|----------|----------------------|
+| **Pavithiran T** | IT22034472 | Pest Attack Prediction Module |
+| **Harytharan S** | IT22346636 | Fertilizer Recommendation & Yield Prediction |
+| **Thenujan J** | IT22035776 | Cultivation Cost Estimation Module |
+| **Tharsiegan** | IT22217004 | Paddy Price & Demand Forecasting Module |
+
+
 ## 📌 Project Overview
 Paddy farming in Sri Lanka faces multiple challenges such as pest attacks, improper fertilizer application, high cultivation costs, and unstable market price fluctuations. Farmers and agricultural officers often make decisions without accurate data-driven insights, resulting in yield loss, increased cost, and environmental damage due to chemical misuse.
 
@@ -36,11 +50,8 @@ This project proposes an **AI-Driven Decision Support System** as a **web-based 
 ## 🏗️ System Architecture
 The system is designed as a modular web application with integrated AI pipelines.
 
-### ✅ Architecture Diagram
-> 📌 *Insert your architecture diagram image here*  
-Add an image named `architecture.png` inside a folder called `docs/` and reference it below:
-
-![System Architecture](docs/architecture.png)
+### ✅ System Diagram
+![System Architecture](docs/system.png)
 
 ---
 
@@ -75,8 +86,8 @@ Add an image named `architecture.png` inside a folder called `docs/` and referen
   - R² Score, MSE (regression)
 
 ###  Database
-- MongoDB / MySQL / PostgreSQL *(update based on your project)*
-- Firebase *(optional if used)*
+- MongoDB / MySQL 
+- Firebase
 
 ###  IoT / Sensors (Optional Mode)
 - Soil moisture sensor
@@ -90,5 +101,46 @@ Add an image named `architecture.png` inside a folder called `docs/` and referen
 ##  Project Dependencies
 ### Python Dependencies
 Install required packages:
-```bash
-pip install -r requirements.txt
+## 📦 Project Dependencies
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.1
+matplotlib==3.8.4
+seaborn==0.13.2
+joblib==1.4.2
+scipy==1.13.0
+xgboost==2.0.3
+lightgbm==4.3.0
+statsmodels==0.14.2
+
+
+### 🌐 Frontend Setup
+cd research ui
+npm install
+npm run dev
+
+## 📊 Future Enhancements
+- Mobile application support
+- Real-time IoT data streaming
+- Government API integration
+- Multi-language support (Sinhala / Tamil)
+- AI-based disease image detection
+
+---
+
+## 📜 License
+This project is developed for **academic and research purposes**.
+
+---
+
+## 🙌 Acknowledgments
+- Department of Agriculture – Sri Lanka
+- Open-source ML libraries
+- Academic supervisors and project team members
+
+## 🎓 Academic Supervision
+
+- **Supervisor**: Mr.Suresh Niroshan Fernando
+
+- **Co-Supervisor**: Prof. Samantha Rajapaksha
+
