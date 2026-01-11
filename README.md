@@ -102,22 +102,22 @@ The system is designed as a modular web application with integrated AI pipelines
 ### Python Dependencies
 Install required packages:
 ## 📦 Project Dependencies
-numpy==1.26.4
-pandas==2.2.2
-scikit-learn==1.4.1
-matplotlib==3.8.4
-seaborn==0.13.2
-joblib==1.4.2
-scipy==1.13.0
-xgboost==2.0.3
-lightgbm==4.3.0
-statsmodels==0.14.2
+- numpy==1.26.4
+- pandas==2.2.2
+- scikit-learn==1.4.1
+- matplotlib==3.8.4
+- seaborn==0.13.2
+- joblib==1.4.2
+- scipy==1.13.0
+- xgboost==2.0.3
+- lightgbm==4.3.0
+- statsmodels==0.14.2
 
 
 ### 🌐 Frontend Setup
-cd research ui
-npm install
-npm run dev
+- cd research ui
+- npm install
+- npm run dev
 
 ## 📊 Future Enhancements
 - Mobile application support
